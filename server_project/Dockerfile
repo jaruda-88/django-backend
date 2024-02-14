@@ -10,3 +10,10 @@ RUN apt-get update && \
     apt-get install -y && \
     pip install --upgrade pip && \
     pip install --no-cache-dir --upgrade -r requirements.txt
+
+COPY . /server_project
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
