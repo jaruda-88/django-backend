@@ -2,11 +2,13 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Article
 from .serializers import ArticleSerializer
-from elasticsearch_dsl import Q
+from elasticsearch_dsl import connections, Q
 
-class ArticleView(viewsets.ModelViewSet):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
+
+def search(request)
+# class ArticleView(viewsets.ModelViewSet):
+#     queryset = Article.objects.all()
+#     serializer_class = ArticleSerializer
 
     # def get_queryset(self):
     #     title = self.request.query_params.get("title")
