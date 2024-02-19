@@ -6,9 +6,9 @@ from .serializers import ArticleSerializer
 from elasticsearch_dsl import connections, Q
 
 
-class ArticleListCreateAPIVIEW(generics.ListCreateAPIView):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
+# class ArticleListCreateAPIVIEW(generics.ListCreateAPIView):
+#     queryset = Article.objects.all()
+#     serializer_class = ArticleSerializer
 
 # def search(request):
 #     query = request.GET.get('query', '')

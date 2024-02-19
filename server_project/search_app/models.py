@@ -34,15 +34,24 @@ from server_project.settings import AUTH_USER_MODEL
 #     def __str__(self):
 #         return f"{self.author}: {self.title} ({self.create_at.date()})"
 
+# class Article(models.Model):
+#     title = models.CharField(max_length=100)
+#     content = models.TextField()
+#     create_at = models.DateTimeField(auto_now_add=True)
+
+
+# class ArticleDocument(Document):
+#     title = Text()
+#     content = Text()
+
+#     class Index:
+#         name = 'articles'
+
+class Category(models.Model):
+    title = models.CharField(max_length=100)
+
 class Article(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
-    create_at = models.DateTimeField(auto_now_add=True)
-
-
-class ArticleDocument(Document):
-    title = Text()
-    content = Text()
-
-    class Index:
-        name = 'articles'
+    category = models.ForeignKey(
+        Category, related_name='category', on_delete=models.CASCADE
+    )

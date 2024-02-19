@@ -47,10 +47,27 @@ INSTALLED_APPS = [
     'django_elasticsearch_dsl_drf',
 ]
 
+# ELASTICSEARCH_DSL = {
+#     'default': {
+#         'hosts': 'http://elasticsearch:9200' # same as above
+#     },
+# }
+ELK_BASE_URL = 'elasticsearch://{username}:{password}@{host_ip}:{host_port}'
+ELASTIC_SEARCH_URL = ELK_BASE_URL.format(
+    username='ELASTICSEARCH_USER',
+    password='ELASTICSEARCH_PASS',
+    host_ip='es', # 'elasticsearch' - service name in docker-compose.yml
+    host_port='9200'
+)
+    
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'elasticsearch:9200'
-    }
+        'hosts': [ELASTIC_SEARCH_URL]
+    },
+}
+
+ELASTICSEARCH_INDEX_NAMES = {
+    'search_app.article': 'articles'
 }
 
 MIDDLEWARE = [
