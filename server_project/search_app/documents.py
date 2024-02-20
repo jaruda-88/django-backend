@@ -6,7 +6,6 @@ from .models import Article
 
 @registry.register_document
 class ArticleDocument(Document):
-    search_fields = ('title', 'category')
     title = fields.TextField(
         attr='title',
         fields={

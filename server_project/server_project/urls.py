@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from search_app.views import ArticleDocumentView
 
 router = DefaultRouter()
+router.register(r'search_app', ArticleDocumentView, basename='search_app')
 
 urlpatterns = [
     path('', include(router.urls)),
