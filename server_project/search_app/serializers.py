@@ -6,6 +6,6 @@ class ArticleDocumentSerializer(DocumentSerializer):
     class Meta:
         document = ArticleDocument
         fields = (
-            'titile',
+            'title',
             'category'
         )

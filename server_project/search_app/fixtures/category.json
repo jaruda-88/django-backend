@@ -1,0 +1,17 @@
+[
+    {
+        "model":"search_app.category",
+        "pk":1,
+        "fields": {
+            "title": "aaaaa"
+        }
+
+    },
+    {
+        "model":"search_app.category",
+        "pk":2,
+        "fields": {
+            "title": "bbbbb"
+        }
+    }
+]

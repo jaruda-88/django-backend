@@ -18,7 +18,7 @@ class ArticleDocument(Document):
         properties= {
             'id': fields.IntegerField(),
             'title': fields.TextField(
-                attr='titile',
+                attr='title',
                 fields={
                     'raw': fields.KeywordField(),
                 }

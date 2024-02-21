@@ -52,14 +52,14 @@ INSTALLED_APPS = [
 #         'hosts': 'http://elasticsearch:9200' # same as above
 #     },
 # }
+
 ELK_BASE_URL = 'elasticsearch://{username}:{password}@{host_ip}:{host_port}'
 ELASTIC_SEARCH_URL = ELK_BASE_URL.format(
     username='ELASTICSEARCH_USER',
     password='ELASTICSEARCH_PASS',
     host_ip='es', # 'elasticsearch' - service name in docker-compose.yml
     host_port='9200'
-)
-    
+)    
 ELASTICSEARCH_DSL = {
     'default': {
         'hosts': [ELASTIC_SEARCH_URL]

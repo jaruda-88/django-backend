@@ -14,7 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+# from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from search_app.views import ArticleDocumentView
@@ -25,18 +25,3 @@ router.register(r'search_app', ArticleDocumentView, basename='search_app')
 urlpatterns = [
     path('', include(router.urls)),
 ]
-
-
-
-# from django.contrib import admin
-# from django.urls import path, include
-# from rest_framework.routers import DefaultRouter
-# from books.views import BookViewSet
-
-# router = DefaultRouter()
-# router.register(r'books', BookViewSet)
-
-# urlpatterns = [
-#     # path('admin/', admin.site.urls),
-#     path('', include(router.urls)),
-# ]

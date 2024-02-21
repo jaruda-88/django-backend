@@ -1,0 +1,19 @@
+[
+    {
+        "model":"search_app.article",
+        "pk":1,
+        "fields": {
+            "title": "a",
+            "category": 1
+        }
+
+    },
+    {
+        "model":"search_app.article",
+        "pk":2,
+        "fields": {
+            "title": "b",
+            "category": 2
+        }
+    }
+]
