@@ -12,3 +12,11 @@
 - elasticsearch-plugin install analysis-nori
 
 ## docker 
+-python manage.py search_index --rebuild
+-python nange.py loaddata article.json category.json
+
+-http://localhost:8000/search_app?search=a
+-http://localhost:8000/search_app?category=2
+-http://localhost:8000/search_app/suggest/?title__completion=how
+
+

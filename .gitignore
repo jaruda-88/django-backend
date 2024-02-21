@@ -1,1 +1,6 @@
 __pycache__
+
+certs/
+es_data/
+migrations/
+db.sqlite3
