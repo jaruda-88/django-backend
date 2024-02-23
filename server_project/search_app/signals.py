@@ -2,6 +2,7 @@ from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 from django_elasticsearch_dsl.registries import registry
 
+# 색인 업데이트
 
 @receiver(post_save)
 def update_document(sender, **kwargs):

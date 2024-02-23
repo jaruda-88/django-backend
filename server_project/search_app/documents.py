@@ -3,6 +3,7 @@ from django_elasticsearch_dsl.registries import registry
 
 from .models import Article
 
+# 모델을 elasticsearch로 인덱싱
 
 @registry.register_document
 class ArticleDocument(Document):
